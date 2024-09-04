@@ -3,19 +3,31 @@
 A minimal CLI interface for the image format inspector embedded in
 https://opendev.org/openstack/oslo.utils.
 
-## Install it from PyPI
+## Install 
+
+### from git
+```bash
+git clone https://github.com/jayofdoom/disk-image-checker
+python -m venv disk-image-checker/venv
+source disk-image-checker/venv/bin/activate
+cd disk-image-checker
+pip install .
+deactivate
+```
+
+### from PyPI
 
 ```bash
-# SOON pip install diskimagechecker
+# SOON TO COME pip install diskimagechecker
 ```
 
 ## Usage
 
 ```bash
-# python -m diskimagechecker -i /path/to/good-image
+# /path/to/venv/bin/python -m diskimagechecker -i /path/to/good-image
 # echo $?
 0
-# python -m diskimagechecker -i /path/to/danger-image
+# /path/to/venv/bin/python -m diskimagechecker -i /path/to/danger-image
 # echo $?
 1
 ```

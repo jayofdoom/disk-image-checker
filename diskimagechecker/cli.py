@@ -11,6 +11,7 @@
 #    WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 #    License for the specific language governing permissions and limitations
 #    under the License.
+import sys
 import os
 
 import click
@@ -41,4 +42,7 @@ def main(image, verbose):  # pragma: no cover
         click.echo('VIRTUAL_SIZE=%s' % virtual_size)
         click.echo('ACTUAL_SIZE=%s' % actual_size)
         click.echo('IMAGE_FORMAT=%s' % fmt)
+
+    if not safe:
+        sys.exit(1)
 
